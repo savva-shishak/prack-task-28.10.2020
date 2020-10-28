@@ -37,7 +37,7 @@ function sendRequest({url, data}) {
 
 function showSucces() {
   ind.classList.remove('indicator_open');
-  msg.innerHTML = '<div class="msg msg_succes">Форма успешно отправлена!</div>'
+  msg.innerHTML = '<div class="msg msg_success">Форма успешно отправлена!</div>'
 }
 
 function showError() {

@@ -93,6 +93,11 @@
   grid-column: 2/3;
 }
 
+.form__msg {
+  width: 100%;
+  height: 30px;
+}
+
 .indicator {
   position: relative;
   outline: 3px solid rgb(0, 26, 255);
@@ -135,11 +140,6 @@
 
 .indicator_open .indicator__value {
   animation: indicator 3s;
-}
-
-.form__msg {
-  width: 100%;
-  height: 30px;
 }
 
 .msg {
@@ -190,7 +190,7 @@
     gap: 15px;
   }
 
-  .form__btn {
+  .form__btn, .form__indicator {
     grid-column: 1/2;
   }
 }
