@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <form class="form" action="http://localhost/form" method="POST">
+  <form class="form" name="registration" action="http://localhost/form" method="POST">
     <div class="form__body">
 
       <div class="form__row-1">
@@ -29,7 +29,7 @@
         <div>
           <div class="input">
             <div class="input__group">
-              <input placeholder="Отчество" name="patrnymic" class="input__textfiled">
+              <input placeholder="Отчество" name="patronymic" class="input__textfiled">
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
         </div>
         <div class="input">
           <select name="region" class="input__select">
-            <option value="Страна"    class="input__option">Страна</option>
+            <option class="input__option">Страна</option>
             <option value="Тайланд"   class="input__option">Тайланд</option>
             <option value="Индонезия" class="input__option">Индонезия</option>
             <option value="Малайзия"  class="input__option">Малайзия</option>
@@ -54,12 +54,17 @@
         <div class="btn-group form__btn">
           <button type="submit" class="btn-group__btn">Отправить</button>
         </div>
+        <div class="form__indicator indicator">
+          <div class="indicator__value"></div>
+          <div class="indicator__label">Отправка...</div>
+        </div>
       </div>
 
       <div class="form__msg">
-        <div class="msg"></div>
       </div>
     </div>
   </form>
+
+  <script src="script.js"></script>
 </body>
 </html>
