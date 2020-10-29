@@ -11,7 +11,8 @@ form.addEventListener('submit', e => {
 
   hideBtnAndShowIndicator();
 
-  sendRequest({url: form.action, data: values})
+  console.log( form.action);
+  sendRequest(form.action, values);
 });
 
 function getValuesAtForm() {
@@ -29,8 +30,8 @@ function hideBtnAndShowIndicator() {
   ind.classList.add('indicator_open');
 }
 
-function sendRequest({url, data}) {
-  fetch({url, body: data})
+function sendRequest(url, data) {
+  fetch(url, {body: JSON.stringify(data), method: 'POST', headers: {'Content-Type': 'application/json;charset=utf-8'}})
     .then(at3000ms(showSucces))
     .catch(at3000ms(showError));
 }
@@ -42,7 +43,7 @@ function showSucces() {
 
 function showError() {
   ind.classList.remove('indicator_open');
-  msg.innerHTML = '<div class="msg msg_danger">Ошибка! <small>Скорее всего, потому что не правильный URL</small></div>';
+  msg.innerHTML = '<div class="msg msg_danger">Ошибка!</div>';
 }
 
 function at3000ms(func) {
